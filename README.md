@@ -55,13 +55,13 @@ PySide requires Python 2.6 or later and Qt 4.6 or better.
 ### Installing PySide
 
 Use `pip` to get `PySide` installed:
-   ```
-   c:\env> Scripts\pip install PySide --install-option="--qmake=c:\\Qt\\4.8.2\\bin\\qmake.exe"
-   ```
+      ```
+      c:\env> Scripts\pip install PySide --install-option="--qmake=c:\\Qt\\4.8.2\\bin\\qmake.exe"
+      ```
 Optionally you can specify the path to OpenSSL libs:
-   ```
-   c:\env> Scripts\pip install PySide --install-option="--openssl=c:\\OpenSSL32bit\\bin" --install-option="--qmake=c:\\Qt\\4.8.2\\bin\\qmake.exe"
-   ```
+      ```
+      c:\env> Scripts\pip install PySide --install-option="--openssl=c:\\OpenSSL32bit\\bin" --install-option="--qmake=c:\\Qt\\4.8.2\\bin\\qmake.exe"
+      ```
 ### Building PySide installer
 
 1. Clone `PySide` from git repository:
@@ -111,17 +111,17 @@ Optionally you can specify the path to OpenSSL libs:
 ### Installing PySide
 
 Use `pip` to get `PySide` installed from PyPI:
-   ```
-   $ env/bin/pip install PySide
-   ```
+      ```
+      $ env/bin/pip install PySide
+      ```
 Alternatively you can install development version of `PySide` from github repository:
-   ```
-   $ env/bin/pip install git+https://github.com/PySide/pyside-setup.git
-   ```
+      ```
+      $ env/bin/pip install git+https://github.com/PySide/pyside-setup.git
+      ```
 You can also specify version of `PySide` when installing from github repository:
-   ```
-   $ env/bin/pip install git+https://github.com/PySide/pyside-setup.git@1.1.1
-   ```
+      ```
+      $ env/bin/pip install git+https://github.com/PySide/pyside-setup.git@1.1.1
+      ```
 ### Building PySide distribution egg
 
 1. Clone `PySide` from git repository:
