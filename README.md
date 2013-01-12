@@ -245,6 +245,7 @@ Bug fixes
 - Set a default hash function for all ObjectTypes.
 - Fix segfault calling shiboken.dump
 
+
 1.1.1 (2012-04-19)
 ------------------
 
@@ -275,6 +276,7 @@ Bug fixes
 - 1139 Crash at exit due to thread state (tstate) being NULL
 - PYSIDE-41 QModelIndex unhashable
 
+
 1.1.0 (2012-01-02)
 ------------------
 
@@ -304,6 +306,7 @@ Bug fixes
 - 902 Expose Shiboken functionality through a Python module
 - 969 viewOptions of QAbstractItemView error
 
+
 1.0.9 (2011-11-29)
 ------------------
 
@@ -329,6 +332,7 @@ Bug fixes
 - 1008 ApiExtractor Cygwin patch
 - 891 ApiExtractor doesn't support doxygen as backend to doc generation.
 
+
 1.0.8 (2011-10-21)
 ------------------
 
@@ -344,6 +348,7 @@ Bug fixes
 - 1022 RuntimeError: maximum recursion depth exceeded while getting the str of an object
 - 1019 Overriding QWidget.show or QWidget.hide do not work
 - 944 Segfault on QIcon(None).pixmap()
+
 
 1.0.7 (2011-09-21)
 ------------------
@@ -371,6 +376,7 @@ Bug fixes
 - 975 Possible memory leak
 - 991 The __repr__ of various types is broken
 - 988 The type supplied with currentChanged signal in QTabWidget has changed in 1.0.6
+
 
 1.0.6 (2011-08-22)
 ------------------
@@ -410,6 +416,7 @@ Bug fixes
 - 947 NETWORK_ERR during interaction QtWebKit window with server
 - 873 Deprecated methods could emit DeprecationWarning
 - 831 PySide docs would have a "Inherited by" list for each class
+
 
 1.0.5 (2011-07-22)
 ------------------
