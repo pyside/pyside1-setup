@@ -32,161 +32,114 @@ PySide requires Python 2.6 or later and Qt 4.6 or better.
 1. (Optional) Install [OpenSSL](http://slproweb.com/products/Win32OpenSSL.html)
 
 1. Install latest `distribute` distribution into the Python you installed in the first step: download [distribute_setup.py](http://python-distribute.org/distribute_setup.py) and run it using the `python` interpreter of your Python 2.7 installation using a command prompt:
-
-   ::
-
+      ```
       c:\> c:\Python27\python distribute_setup.py
+      ```
 
 1. Use that Python's `bin/easy_install` to install `virtualenv`:
-
-   ::
-
+      ```
       c:\> c:\Python27\Scripts\easy_install virtualenv
-
+      ```
 1. Use that Python's virtualenv to make a workspace:
-
-   ::
-
+      ```
       c:\> c:\Python27\Scripts\virtualenv env
-
+      ```
 1. Open Visual Studio 2008 Command Prompt:
-
-   ::
-
+      ```
       c:\> c:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Visual Studio 2008\Visual Studio Tools\Visual Studio 2008 Command Prompt.lnk
-
+      ```
 1. Switch to the `env` directory:
-
-   ::
-
+      ```
       c:\> cd env
-
+      ```
 ### Installing PySide
 
 Use `pip` to get `PySide` installed:
-
-::
-
+   ```
    c:\env> Scripts\pip install PySide --install-option="--qmake=c:\\Qt\\4.8.2\\bin\\qmake.exe"
-
+   ```
 Optionally you can specify the path to OpenSSL libs:
-
-::
-
+   ```
    c:\env> Scripts\pip install PySide --install-option="--openssl=c:\\OpenSSL32bit\\bin" --install-option="--qmake=c:\\Qt\\4.8.2\\bin\\qmake.exe"
-
+   ```
 ### Building PySide installer
 
 1. Clone `PySide` from git repository:
-
-   ::
-
+      ```
       c:\> git clone https://github.com/PySide/pyside-setup.git pyside-setup
-
+      ```
 1. Switch to the `pyside-setup` directory:
-
-   ::
-
+      ```
       c:\> cd pyside-setup
-
+      ```
 1. Build `PySide` windows installer:
-
-   ::
-
+      ```
       c:\> c:\Python27\python setup.py bdist_wininst --qmake=c:\Qt\4.8.2\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
-
+      ```
 ## Installing PySide from source on a UNIX System (Ubuntu 12.04 LTS)
 
 ### Installing prerequisities
 
 1. Install Python 2.7 header files and a static library:
-    
-   ::
-
+      ```
       $ sudo apt-get install python2.7-dev
-   
+      ```
 1. Install Qt 4.8 libraries:
-    
-   ::
-
+      ```
       $ sudo apt-get install qt-sdk
-   
+      ```
 1. Install cmake:
-    
-   ::
-
+      ```
       $ sudo apt-get install cmake
-
+      ```
 1. Install git:
-    
-   ::
-
+      ```
       $ sudo apt-get install git
-   
+      ```
 1. Install latest `distribute` distribution into the Python you installed in the first step: download [distribute_setup.py](http://python-distribute.org/distribute_setup.py)and run it using the `python` interpreter of your Python 2.7 installation using a command prompt:
-
-   ::
-
+      ```
       $ sudo python distribute_setup.py
-
+      ```
 1. Use that Python's `bin/easy_install` to install `virtualenv`:
-
-   ::
-
+      ```
       $ sudo easy_install virtualenv
-
+      ```
 1. Use that Python's virtualenv to make a workspace:
-
-   ::
-
+      ```
       $ virtualenv env
-
+      ```
 ### Installing PySide
 
 Use `pip` to get `PySide` installed from PyPI:
-
-::
-
+   ```
    $ env/bin/pip install PySide
-
+   ```
 Alternatively you can install development version of `PySide` from github repository:
-
-::
-
+   ```
    $ env/bin/pip install git+https://github.com/PySide/pyside-setup.git
-
+   ```
 You can also specify version of `PySide` when installing from github repository:
-
-::
-
+   ```
    $ env/bin/pip install git+https://github.com/PySide/pyside-setup.git@1.1.1
-
+   ```
 ### Building PySide distribution egg
 
 1. Clone `PySide` from git repository:
-
-   ::
-
+      ```
       $ git clone https://github.com/PySide/pyside-setup.git pyside-setup
-
+      ```
 1. Switch to the `pyside-setup` directory:
-
-   ::
-
+      ```
       $ cd pyside-setup
-
+      ```
 1. Build `PySide` distribution egg:
-
-   ::
-
+      ```
       $ env/bin/python setup.py bdist_egg
-
+      ```
 1. Optionally you can build standalone version of distribution egg with embedded Qt libs:
-
-   ::
-
+      ```
       $ env/bin/python setup.py bdist_egg --standalone
-
+      ```
 ## Feedback and getting involved
 
 - Mailing list: http://lists.qt-project.org/mailman/listinfo/pyside
@@ -237,7 +190,6 @@ You can also specify version of `PySide` when installing from github repository:
 - 1139 Crash at exit due to thread state (tstate) being NULL
 - PYSIDE-41 QModelIndex unhashable
 
-
 ### 1.1.0 (2012-01-02)
 
 #### Major changes
@@ -264,7 +216,6 @@ You can also specify version of `PySide` when installing from github repository:
 - 902 Expose Shiboken functionality through a Python module
 - 969 viewOptions of QAbstractItemView error
 
-
 ### 1.0.9 (2011-11-29)
 
 #### Bug fixes
@@ -288,7 +239,6 @@ You can also specify version of `PySide` when installing from github repository:
 - 1008 ApiExtractor Cygwin patch
 - 891 ApiExtractor doesn't support doxygen as backend to doc generation.
 
-
 ### 1.0.8 (2011-10-21)
 
 #### Major changes
@@ -301,7 +251,6 @@ You can also specify version of `PySide` when installing from github repository:
 - 1022 RuntimeError: maximum recursion depth exceeded while getting the str of an object
 - 1019 Overriding QWidget.show or QWidget.hide do not work
 - 944 Segfault on QIcon(None).pixmap()
-
 
 ### 1.0.7 (2011-09-21)
 
@@ -328,14 +277,13 @@ You can also specify version of `PySide` when installing from github repository:
 - 991 The __repr__ of various types is broken
 - 988 The type supplied with currentChanged signal in QTabWidget has changed in 1.0.6
 
-
 ### 1.0.6 (2011-08-22)
 
 #### Major changes
 
-- New documentation layout;
-- Fixed some regressions from the last release (1.0.5);
-- Optimizations during anonymous connection;
+- New documentation layout
+- Fixed some regressions from the last release (1.0.5)
+- Optimizations during anonymous connection
 
 #### Bug fixes
 
@@ -365,14 +313,13 @@ You can also specify version of `PySide` when installing from github repository:
 - 873 Deprecated methods could emit DeprecationWarning
 - 831 PySide docs would have a "Inherited by" list for each class
 
-
 ### 1.0.5 (2011-07-22)
 
 #### Major changes
 
-- Widgets present on "ui" files are exported in the root widget, check PySide ML thread for more information[1];
-- pyside-uic generate menubars without parent on MacOS plataform;
-- Signal connection optimizations;
+- Widgets present on "ui" files are exported in the root widget, check PySide ML thread for more information[1]
+- pyside-uic generate menubars without parent on MacOS plataform
+- Signal connection optimizations
 
 #### Bug fixes
 
