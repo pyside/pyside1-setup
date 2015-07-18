@@ -10,7 +10,7 @@ Installing prerequisites
 
    ::
 
-      $ sudo apt-get install build-essential git cmake libqt4-dev libphonon-dev python2.7-dev libxml2-dev libxslt1-dev qtmobility-dev
+      $ sudo apt-get install build-essential git cmake libqt4-dev libphonon-dev python2.7-dev libxml2-dev libxslt1-dev qtmobility-dev libqtwebkit-dev
 
 #. Install latest ``pip`` distribution into the Python you
    installed in the first step: download `get-pip.py 
