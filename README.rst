@@ -2,19 +2,19 @@
 PySide
 ======
 
-.. image:: https://pypip.in/wheel/PySide/badge.png
+.. image:: https://img.shields.io/pypi/wheel/pyside.svg
    :target: https://pypi.python.org/pypi/PySide/
    :alt: Wheel Status
 
-.. image:: https://pypip.in/download/PySide/badge.png
+.. image:: https://img.shields.io/pypi/dm/pyside.svg
    :target: https://pypi.python.org/pypi/PySide/
    :alt: Downloads
 
-.. image:: https://pypip.in/version/PySide/badge.png
+.. image:: https://img.shields.io/pypi/v/pyside.svg
    :target: https://pypi.python.org/pypi/PySide/
    :alt: Latest Version
 
-.. image:: https://pypip.in/license/PySide/badge.png
+.. image:: https://binstar.org/asmeurer/pyside/badges/license.svg
    :target: https://pypi.python.org/pypi/PySide/
    :alt: License
 
