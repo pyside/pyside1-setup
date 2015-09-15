@@ -10,11 +10,11 @@ Installing prerequisites
    <http://www.python.org/download/>`_.
 
 #. Install `Qt 4.8 libraries for Windows VS 2008 edition
-   <http://download.qt-project.org/official_releases/qt/4.8/4.8.6/qt-opensource-windows-x86-vs2008-4.8.6.exe>`_
+   <http://download.qt-project.org/official_releases/qt/4.8/4.8.7/qt-opensource-windows-x86-vs2008-4.8.7.exe>`_
    when building against Python 2.6, 2.7 or 3.2.
 
    Install `Qt 4.8 libraries for Windows VS 2010 edition
-   <http://download.qt-project.org/official_releases/qt/4.8/4.8.6/qt-opensource-windows-x86-vs2010-4.8.6.exe>`_
+   <http://download.qt-project.org/official_releases/qt/4.8/4.8.7/qt-opensource-windows-x86-vs2010-4.8.7.exe>`_
    when building against Python 3.3 or 3.4.
 
 #. Install `Cmake
@@ -50,6 +50,13 @@ Installing prerequisites
 
       c:\> c:\Python27\Scripts\pip install wheel
 
+
+.. note::
+   
+   * If you are using the Windows SDK versions linked above, make sure that you have .NET Framework 
+     Version 4.0 installed on your system. Version 4.5 will not work.
+   * To avoid problems with environment variables, execute all commands below in a "Windows SDK Comamnd 
+     Prompt" that you will find in your Start Menu, instead of a standard cmd.exe command line.
 
 Building PySide distribution
 ----------------------------
