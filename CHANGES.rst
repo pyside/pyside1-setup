@@ -1,16 +1,28 @@
 Changes
 =======
 
-1.2.3 (2014-??-??)
+1.2.3 (2015-10-12)
 ------------------
 
-Major changes
-~~~~~~~~~~~~~
+Complete list of changes and bug fixes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PySide
+******
+
+- Fix PYSIDE-164: Fix possible deadlock on signal connect/emit
+
+Shiboken
+********
+
+- Don't ignore classes in topology
+- Process global enums in declaration order
+- Return enums in declaration order (order added)
 
 PySide-setup
 ************
 
-- On Linux systems there is no more need to call the post-install script
+- On Linux and MacOS systems there is no more need to call the post-install script
 
 1.2.2 (2014-04-24)
 ------------------

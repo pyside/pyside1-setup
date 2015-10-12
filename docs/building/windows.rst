@@ -62,19 +62,19 @@ Building PySide distribution
 ----------------------------
 
 #. Download and extract `PySide source distribution
-   <https://pypi.python.org/packages/source/P/PySide/PySide-1.2.2.tar.gz>`_
+   <https://pypi.python.org/packages/source/P/PySide/PySide-1.2.3.tar.gz>`_
 
 #. Switch to the distribution directory:
 
    ::
 
-      c:\> cd PySide-1.2.2
+      c:\> cd PySide-1.2.3
 
 #. Build the ``wheel`` binary distribution:
 
    ::
 
-      c:\> c:\Python27\python.exe setup.py bdist_wheel --qmake=c:\Qt\4.8.5\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
+      c:\> c:\Python27\python.exe setup.py bdist_wheel --qmake=c:\Qt\4.8.7\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
 
 
 Building PySide distribution from a Git repository
@@ -96,13 +96,13 @@ Building PySide distribution from a Git repository
 
    ::
 
-      c:\> c:\Python27\python.exe setup.py bdist_wheel --version=1.2.2 --qmake=c:\Qt\4.8.5\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
+      c:\> c:\Python27\python.exe setup.py bdist_wheel --version=1.2.3 --qmake=c:\Qt\4.8.7\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
 
 #. To build the development version of ``PySide`` distribution, ignore the --version parameter:
 
    ::
 
-      c:\> c:\Python27\python.exe setup.py bdist_wheel --qmake=c:\Qt\4.8.5\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
+      c:\> c:\Python27\python.exe setup.py bdist_wheel --qmake=c:\Qt\4.8.7\bin\qmake.exe --openssl=c:\OpenSSL32bit\bin
 
 
 Installing PySide distribution
@@ -112,7 +112,7 @@ Installing PySide distribution
 
    ::
 
-      c:\> c:\Python27\Scripts\pip install dist\PySide-1.2.2-cp27-none-win32.whl
+      c:\> c:\Python27\Scripts\pip install dist\PySide-1.2.3-cp27-none-win32.whl
 
 
 Installing PySide distribution into ``virtual`` Python environment
@@ -140,4 +140,4 @@ Installing PySide distribution into ``virtual`` Python environment
 
    ::
 
-      c:\> Scripts\pip install ..\dist\PySide-1.2.2-cp27-none-win32.whl
+      c:\> Scripts\pip install ..\dist\PySide-1.2.3-cp27-none-win32.whl
