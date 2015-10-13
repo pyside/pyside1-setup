@@ -105,6 +105,25 @@ from utils import regenerate_qt_resources
 from utils import filter_match
 from utils import osx_localize_libpaths
 
+# make sure that setup.py is run with an allowed python version
+def check_allowed_python_version():
+    import re
+    pattern = "'Programming Language :: Python :: (\d+)\.(\d+)'"
+    supported = []
+    with open(__file__) as setup:
+        for line in setup.readlines():
+            found = re.search(pattern, line)
+            if found:
+                major = int(found.group(1))
+                minor = int(found.group(2))
+                supported.append( (major, minor) )
+    this_py = sys.version_info[:2]
+    if this_py not in supported:
+        print("only these python versions are supported:", supported)
+        sys.exit(1)
+
+check_allowed_python_version()
+
 # Declare options
 OPTION_DEBUG = has_option("debug")
 OPTION_RELWITHDEBINFO = has_option('relwithdebinfo')
