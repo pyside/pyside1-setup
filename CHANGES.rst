@@ -1,6 +1,17 @@
 Changes
 =======
 
+1.2.4 (2015-10-14)
+------------------
+
+Complete list of changes and bug fixes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PySide-setup
+************
+
+- Make sure that setup.py is run with an allowed python version
+
 1.2.3 (2015-10-12)
 ------------------
 
