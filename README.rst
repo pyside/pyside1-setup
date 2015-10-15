@@ -124,4 +124,4 @@ Feedback and getting involved
 
 - Mailing list: http://lists.qt-project.org/mailman/listinfo/pyside
 - Issue tracker: https://bugreports.qt-project.org/browse/PYSIDE
-- Code Repository: http://qt.gitorious.org/pyside
+- Code Repository: https://github.com/PySide
