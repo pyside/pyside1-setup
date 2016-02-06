@@ -161,6 +161,12 @@ if sys.platform == "win32":
     if not OPTION_MAKESPEC in ["msvc", "mingw"]:
         print("Invalid option --make-spec. Available values are %s" % (["msvc", "mingw"]))
         sys.exit(1)
+elif sys.platform == "cygwin":
+    if OPTION_MAKESPEC is None:
+        OPTION_MAKESPEC = "make"
+    if not OPTION_MAKESPEC in ["make"]:
+        print("Invalid option --make-spec. Available values are %s" % (["make"]))
+        sys.exit(1)
 else:
     if OPTION_MAKESPEC is None:
         OPTION_MAKESPEC = "make"
@@ -397,6 +403,8 @@ class pyside_build(_build):
             lib_exts = ['.so']
             if sys.platform == 'darwin':
                 lib_exts.append('.dylib')
+            if sys.platform == 'cygwin':
+                lib_exts.append('.dll.a')
             if sys.version_info[0] > 2:
                 lib_suff = getattr(sys, 'abiflags', None)
             else: # Python 2
@@ -669,6 +677,9 @@ class pyside_build(_build):
         elif sys.platform == 'darwin':
             so_ext = '.dylib'
             so_star = so_ext
+        elif sys.platform == 'cygwin':
+            so_ext = '.dll'
+            so_star = so_ext
         # <build>/shiboken/doc/html/* -> <setup>/PySide/docs/shiboken
         copydir(
             "{build_dir}/shiboken/doc/html",
@@ -681,8 +692,8 @@ class pyside_build(_build):
             vars=vars)
         # <install>/lib/site-packages/shiboken.so -> <setup>/PySide/shiboken.so
         copyfile(
-            "{site_packages_dir}/shiboken.so",
-            "{dist_dir}/PySide/shiboken.so",
+            "{site_packages_dir}/shiboken" + so_ext,
+            "{dist_dir}/PySide/shiboken" + so_ext,
             vars=vars)
         # <install>/lib/site-packages/pysideuic/* -> <setup>/pysideuic
         copydir(
@@ -747,6 +758,8 @@ class pyside_build(_build):
         if OPTION_STANDALONE:
             if sys.platform == 'darwin':
                 raise RuntimeError('--standalone not yet supported for OSX')
+            elif sys.platform == 'cygwin':
+                raise RuntimeError('--standalone not yet supported for cygwin')
             # <qt>/bin/* -> <setup>/PySide
             executables.extend(copydir("{qt_bin_dir}", "{dist_dir}/PySide",
                 filter=[
