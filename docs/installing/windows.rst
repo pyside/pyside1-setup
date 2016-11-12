@@ -20,6 +20,12 @@ To install PySide on Windows you can choose from the following options:
    ::
 
       pip install -U PySide
+   
+   **Note**: There are only selected versions of binary package in pip. Please check out `this page
+   <https://pypi.python.org/pypi/PySide#id41>`_ to see the list of supported python version 
+   (including 32/64 bit). If your python version does not correspond to one of the labels, pip
+   will not install the wheel. Instead, it will try to compile PySide, which would require more
+   tools.
 
 #. Use setuptools to install the ``egg`` binary packages (deprecated):
 
