@@ -970,9 +970,9 @@ class pyside_build(_build):
 
 
 try:
-    with open(os.path.join(script_dir, 'README.rst')) as f:
+    with open(os.path.join(script_dir, 'README.rst'), 'r', encoding='utf-8') as f:
         README = f.read()
-    with open(os.path.join(script_dir, 'CHANGES.rst')) as f:
+    with open(os.path.join(script_dir, 'CHANGES.rst'), 'r', encoding='utf-8') as f:
         CHANGES = f.read()
 except IOError:
     README = CHANGES = ''
